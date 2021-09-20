@@ -1,0 +1,50 @@
+
+
+<div class="login-form col-lg-3">
+    <div>
+        <!-- signup form heading -->
+        <h3 id="heading">
+            Professor SignUp
+        </h3>
+    </div>
+    <br>
+    <div>
+        <form #professorsignup="ngForm"  >
+
+        <!-- fullname -->
+        <div>
+            <input type="text" class="form-control" #fullname="ngModel" id="fullname" name="fullname" [(ngModel)]="professorData.fullname" placeholder="Full Name" required />
+            <span for="error" class="error-msg" *ngIf="fullname.touched && fullname.invalid" >This Field is Required</span>
+        </div>
+        <br>
+        <!-- email -->
+        <div >
+            <input type="Email" class="form-control" #email="ngModel" id="email" name="email" [(ngModel)]="professorData.email" pattern="^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+)[.]([a-z]{2,3})(.[a-z]{2,3})?$" placeholder="Email*" required />
+            <span for="error" class="error-msg" *ngIf="email.touched && email.invalid" >Invalid Email</span>
+        </div>
+        <br>
+         <!-- password -->
+        <div>
+            <input type="password" class="form-control" id="password" name="password" #password="ngModel" [(ngModel)]="professorData.password"  placeholder="Password*" required />
+            <span for="error" class="error-msg" *ngIf="password.touched && password.invalid">Invalid Password</span>
+        </div>
+        <br>
+        <!-- confirmpassword -->
+         <div>
+            <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" #confirmpassword="ngModel" [(ngModel)]="professorData.confirmpassword"  placeholder="Confirm Password*" required />
+            <span for="error" class="error-msg" *ngIf="confirmpassword.touched && confirmpassword.invalid">Password does not match</span>
+         </div>
+         
+         <br>
+         <!-- signup button  -->
+        <div>
+            <button class="btn btn-primary login-btn" [disabled]="professorsignup.form.invalid">Submit</button>
+        </div>
+        <br>
+        </form>
+    
+    </div>
+    
+    </div>
+    
+

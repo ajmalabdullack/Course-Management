@@ -1,0 +1,41 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+.login-form{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    transform: scale(1.00);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+  
+}
+.form-control{
+    /* border: 2px thin black; */
+    border-radius: 0%;
+    border: none transparent;
+    border-bottom: 2px solid black;
+    outline: 0 !important;
+}
+.login-btn{
+    width: 100%;
+}
+#heading{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* text-transform: uppercase; */
+    color: rgb(31, 84, 231);
+}
+input.ng-invalid.ng-touched{
+    border-bottom: 2px solid rgb(236, 22, 22);
+}
+input.ng-valid.ng-touched{
+    border-bottom: 2px solid rgb(16, 143, 16);
+}
+.error-msg{
+    margin-top: 10px;
+    color: rgb(236, 22, 22);
+}
+

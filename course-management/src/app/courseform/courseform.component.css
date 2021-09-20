@@ -1,0 +1,33 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+
+.inpt{
+    border:1px solid black ;
+    border-radius: 0;
+}
+.label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.txtarea{
+    border: 1px solid black;
+    border-radius: 0;
+}
+.btn{
+    border-radius: 0;
+    width: 80%;
+    text-align: center;
+}
+.addcourse{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: scale(1.00);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
