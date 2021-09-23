@@ -9,7 +9,7 @@
     </div>
     <br>
     <div>
-        <form #professorsignup="ngForm"  >
+        <form (ngSubmit)="AddProfessor()" #professorsignup="ngForm"  >
 
         <!-- fullname -->
         <div>
@@ -25,14 +25,14 @@
         <br>
          <!-- password -->
         <div>
-            <input type="password" class="form-control" id="password" name="password" #password="ngModel" [(ngModel)]="professorData.password"  placeholder="Password*" required />
+            <input type="password" minlength="8" class="form-control" id="password" name="password" #password="ngModel" [(ngModel)]="professorData.password"  placeholder="Password*" required />
             <span for="error" class="error-msg" *ngIf="password.touched && password.invalid">Invalid Password</span>
         </div>
         <br>
         <!-- confirmpassword -->
          <div>
-            <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" #confirmpassword="ngModel" [(ngModel)]="professorData.confirmpassword"  placeholder="Confirm Password*" required />
-            <span for="error" class="error-msg" *ngIf="confirmpassword.touched && confirmpassword.invalid">Password does not match</span>
+            <input type="password" class="form-control" m inlength="8" id="confirmpassword" name="confirmpassword" #confirmpassword="ngModel" [(ngModel)]="professorData.confirmpassword"  placeholder="Confirm Password*" required />
+            <span for="error" class="error-msg text-danger">{{errormsg}}</span>
          </div>
          
          <br>

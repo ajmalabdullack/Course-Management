@@ -1,0 +1,59 @@
+<div class="main">
+    <div class=''>
+      <div class=''>
+     <h2 class="text-center">STUDENT LIST</h2>
+      </div>
+      
+      <div class=''>            
+        <div class='table-responsive'>
+          <table class='table'>
+                
+            <thead>
+              <tr>
+               
+                <th>Name</th>
+                
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Qulification</th>
+                <th>Course</th>
+              </tr>
+             
+            </thead>
+            <tbody *ngFor="let student of students" >  
+                <tr >
+                  <td>
+                     {{student.fullname}}
+                    </td>
+                   
+                    <td>
+                     {{student.dob}}
+                    </td>
+                    <td>
+                    {{student.address}}
+                    </td>
+                    <td>
+                     {{student.email}}
+                    </td>
+                      <td>
+                     {{student.qualification}}
+                      </td>
+                        <td>
+                         {{student.course}}
+                        </td>
+                       
+                        <td>
+                     
+                       <button class="btn btn-success" (click)="acceptstudent(student)" style="cursor:pointer"> ACCEPT</button> 
+                      <button class="btn btn-danger" (click)="rejectstudent(student)" style="cursor:pointer"> REJECT</button>
+                    
+     
+                    </td>
+                  </tr>              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    </div>

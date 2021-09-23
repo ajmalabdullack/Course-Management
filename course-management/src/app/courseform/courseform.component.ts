@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ProfessorService } from '../professor.service';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-courseform',
@@ -15,9 +18,13 @@ export class CourseformComponent implements OnInit {
     enddate:""
   }
 
-  constructor() { }
+  constructor(private router:Router,private professorService:ProfessorService,private studentService:StudentService) { }
 
   ngOnInit(): void {
   }
 
+  addCourse(){
+     this.professorService.newCourse(this.courseDetails);
+     this.router.navigate(["/"])
+  }
 }

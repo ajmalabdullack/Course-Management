@@ -10,7 +10,7 @@
     </div>
     <br>
     <div>
-        <form #studentsignup="ngForm"  >
+        <form (ngSubmit)="AddStudent()" #studentsignup="ngForm"  >
 
         <!-- fullname -->
         <div>
@@ -33,7 +33,7 @@
          <!-- confirmpassword -->
          <div>
             <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" #confirmpassword="ngModel" [(ngModel)]="studentData.confirmpassword"  placeholder="Confirm Password*" required />
-            <span for="error" class="error-msg" *ngIf="confirmpassword.touched && confirmpassword.invalid">Password does not match</span>
+            <span for="error" class="error-msg" >{{errormsg}}</span>
          </div>
          <br>
          <!-- signup button  -->

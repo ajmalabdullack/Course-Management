@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-student-signup',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student-signup.component.css']
 })
 export class StudentSignupComponent implements OnInit {
+  errormsg:any;
 
   studentData={
     fullname:"",
@@ -14,9 +17,19 @@ export class StudentSignupComponent implements OnInit {
     confirmpassword:""
   }
 
-  constructor() { }
+  constructor(private router:Router, private studentService:StudentService) { }
 
   ngOnInit(): void {
+  }
+
+  AddStudent(){
+    if(this.studentData.confirmpassword==this.studentData.password){
+      this.studentService.newStudent(this.studentData);
+      this.router.navigate(["/students"])
+    }
+    else{
+         this.errormsg ="Password does not match";
+    }
   }
 
 }

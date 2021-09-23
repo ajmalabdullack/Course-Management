@@ -1,0 +1,39 @@
+<div class="main ">
+<div class="form">
+    <div class="col-sm-4">
+        <h2 class="text-center">APPLY</h2>
+        <form (ngSubmit)="apply()" #student="ngForm">
+            <div class="form-group">
+                <label class="label" for="">Full Name</label>
+                <input type="text" class="form-control inpt" [(ngModel)]="studentData.fullname" id="fullname" name="fullname" required/>
+            </div> <br>
+            <div class="form-group">
+                <label class="label" for="">Email</label>
+                <input type="text" class="form-control inpt" [(ngModel)]="studentData.email" id="email" name="email" required/>
+            </div> <br>
+            <div class="form-group">
+                <label class="label" for="">Address</label>
+                <input type="text" class="form-control inpt" [(ngModel)]="studentData.address" id="address" name="address" required/>
+            </div> <br>
+            <div class="form-group">
+                <label class="label" for="">Date of Birth</label>
+                <input type="date" class="form-control inpt" [(ngModel)]="studentData.dob" id="dob" name="dob" required/>
+            </div> <br>
+            <div class="form-group">
+                <label class="label" for="">Qualification</label>
+                <input type="text" class="form-control inpt" [(ngModel)]="studentData.qualification" id="qualification" name="qualification" required/>
+            </div> <br>
+            <div class="form-group">
+                <label class="label" for="">Course Name</label>
+                <select class="form-select" id="course" name="course" [(ngModel)]="studentData.course"   required >
+                    <option selected >Choose your course</option>
+                    <option *ngFor="let course of courses">{{course.coursename}}</option>
+                </select>
+            </div> <br>
+            <div class="d-flex justify-content-center">
+               <button class="btn btn-success" [disabled]="student.form.invalid" >Submit</button>
+            </div> <br>
+        </form>
+    </div>
+</div>
+</div>

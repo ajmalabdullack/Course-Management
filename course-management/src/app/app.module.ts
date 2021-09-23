@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,9 @@ import { ProfessorLoginComponent } from './professor-login/professor-login.compo
 import { ProfessorSignupComponent } from './professor-signup/professor-signup.component';
 import { StudentSignupComponent } from './student-signup/student-signup.component';
 import { CourseformComponent } from './courseform/courseform.component';
+import { CoursesComponent } from './courses/courses.component';
+import { StudentformComponent } from './studentform/studentform.component';
+import { StudentslistComponent } from './studentslist/studentslist.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +25,16 @@ import { CourseformComponent } from './courseform/courseform.component';
     ProfessorLoginComponent,
     ProfessorSignupComponent,
     StudentSignupComponent,
-    CourseformComponent
+    CourseformComponent,
+    CoursesComponent,
+    StudentformComponent,
+    StudentslistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

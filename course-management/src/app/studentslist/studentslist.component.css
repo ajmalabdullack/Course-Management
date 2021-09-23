@@ -1,0 +1,8 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.main{
+    margin: 20px;
+}
+.btn{
+    margin-right: 20px;
+}
