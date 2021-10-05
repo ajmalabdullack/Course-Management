@@ -25,6 +25,6 @@ export class CourseformComponent implements OnInit {
 
   addCourse(){
      this.professorService.newCourse(this.courseDetails);
-     this.router.navigate(["/"])
+     this.router.navigate(["courses"])
   }
 }

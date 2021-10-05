@@ -7,8 +7,17 @@
     margin: 20px;
 }
 .card{
+    width: 20rem;
     background-color: white;
     color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
+    transform: scale(1.0);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+}
+.btn{
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
 }

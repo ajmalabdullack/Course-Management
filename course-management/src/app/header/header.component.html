@@ -1,29 +1,43 @@
-<!-- ***** Header Area Start ***** -->
-<header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a><img src="https://www.tcs.com/content/dam/tcs/images/Newtcslogo/Logo-Blue1x.png" width="140px" height="80px"></a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li class="scroll-to-section"><a routerLink="" routerLinkActive="active">Home</a></li>
-                        <li class="scroll-to-section"><a routerLink="students" routerLinkActive="active">Students</a></li>
-                        <li class="scroll-to-section"><a routerLink="professor" routerLinkActive="active">Professor</a> </li>
-                        <li class="scroll-to-section"><a routerLink="addcourse" routerLinkActive="active">Add Course</a></li>
-                        <li class="scroll-to-section"><a routerLink="courses" routerLinkActive="active">Courses</a></li>
-                        <li class="scroll-to-section"><a routerLink="signupProfessor" routerLinkActive="active">signup</a></li>
-                        <li class="scroll-to-section"><a routerLink="studentslist" routerLinkActive="active">Applied</a></li>
-                    </ul>
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-        </div>
+
+  <nav class="navbar navnw navbar-expand-lg ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ul float-right ms-auto ">
+        <li class="nav-item active ">
+          <a class="nav-link" routerLink="" *ngIf="!auth.StudentloggedIn() && !auth.ProfessorloggedIn()">Home
+                <span class="sr-only"></span>
+              </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="students" *ngIf="!auth.StudentloggedIn() && !auth.ProfessorloggedIn()">Student</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="professor" *ngIf="!auth.StudentloggedIn() && !auth.ProfessorloggedIn()">Professor</a>
+        </li>
+        <li class="nav-item active">
+          <a  class="nav-link" routerLink="studenthome"  *ngIf="auth.StudentloggedIn()">Profile</a>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link"  routerLink="professorhome"  *ngIf="auth.ProfessorloggedIn()">Profile</a>
+      </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="addcourse" *ngIf="auth.ProfessorloggedIn()">Add Course</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="courses" *ngIf="auth.ProfessorloggedIn()||auth.StudentloggedIn() " >Courses</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="studentslist"  *ngIf="auth.ProfessorloggedIn()">Studentlist</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="acceptedstudents"  *ngIf="auth.ProfessorloggedIn()"> Accepted Students</a>
+        </li>
+      
+        <li class="nav-item active logout float-right">
+          <a class="nav-link text-danger" (click)="logout()" *ngIf="auth.ProfessorloggedIn()||auth.StudentloggedIn() ">Logout</a>
+        </li>
+      </ul>
     </div>
-</header>
-<!-- ***** Header Area End ***** -->
+  </nav>

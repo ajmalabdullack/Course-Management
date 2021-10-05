@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StudentService } from '../student.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-student-signup',

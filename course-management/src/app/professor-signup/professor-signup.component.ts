@@ -2,6 +2,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProfessorService } from '../professor.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-professor-signup',
@@ -26,8 +27,8 @@ export class ProfessorSignupComponent implements OnInit {
 
     AddProfessor(){
     if(this.professorData.password==this.professorData.confirmpassword){
-      this.professorService.newProfessor(this.professorData);
-      this.router.navigate(["/professor"])
+      this.professorService.newProfessor(this.professorData)
+      this.router.navigate(['/professor'])
     }
     else{
       console.log("some error occured !")

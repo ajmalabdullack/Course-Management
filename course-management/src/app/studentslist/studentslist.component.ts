@@ -39,7 +39,7 @@ export class StudentslistComponent implements OnInit {
             icon: 'warning',
             confirmButtonText: 'OK'
           })
-          this.router.navigate(['/studentlist'])
+          this.router.navigate(['/studentslist'])
         }
      )
   }

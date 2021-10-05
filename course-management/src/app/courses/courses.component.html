@@ -1,14 +1,16 @@
 <div class="main">
 <div class="row" >
     <div class="col s12 m4 " *ngFor="let course of courses">
-        <div class="card  ">
+        <div class="card ">
             <div class="card-body">
               <h5 class="card-title">{{course.coursename}}</h5>
               <p class="card-text">{{course.description}}</p>
               <p>{{course.duration}}</p>
-              <p>Start date:{{course.startdate}}</p>
-              <P>end date:{{course.enddate}}</P>
-              <a routerLink="/applycourse" class="btn btn-primary">Apply</a>
+              <span>Start date:{{course.startdate}}</span><br>
+              <span>end date:{{course.enddate}}</span>
+              <div class="justify-content-center d-flex">
+                <a routerLink="/applycourse" *ngIf="auth.StudentloggedIn()" class="btn btn-success">Apply</a>
+              </div>
             </div>
           </div>
     </div>

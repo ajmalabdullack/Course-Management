@@ -15,6 +15,10 @@ import { CourseformComponent } from './courseform/courseform.component';
 import { CoursesComponent } from './courses/courses.component';
 import { StudentformComponent } from './studentform/studentform.component';
 import { StudentslistComponent } from './studentslist/studentslist.component';
+import { AcceptedstudentsComponent } from './acceptedstudents/acceptedstudents.component';
+import { ProfessorHomeComponent } from './professor-home/professor-home.component';
+import { StudentHomeComponent } from './student-home/student-home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { StudentslistComponent } from './studentslist/studentslist.component';
     CourseformComponent,
     CoursesComponent,
     StudentformComponent,
-    StudentslistComponent
+    StudentslistComponent,
+    AcceptedstudentsComponent,
+    ProfessorHomeComponent,
+    StudentHomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

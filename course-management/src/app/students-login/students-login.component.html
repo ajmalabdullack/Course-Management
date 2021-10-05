@@ -7,7 +7,7 @@
 </div>
 <br>
 <div>
-    <form #userlogin="ngForm"  >
+    <form (ngSubmit)="studentLogin()" #userlogin="ngForm"  >
     <!-- email -->
     <div >
         <input type="Email" class="form-control" #email="ngModel" id="email" name="email" [(ngModel)]="studentuser.email" pattern="^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+)[.]([a-z]{2,3})(.[a-z]{2,3})?$" placeholder="Email*" required />
